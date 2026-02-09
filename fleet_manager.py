@@ -104,3 +104,11 @@ def calculate_payroll(r):
 
     return spend
             
+def count_officers(r):
+    officers = 0
+
+    for i in range(len(r)):
+        if r[i] == "Commander" or r[i] == "Captain":
+            officers = officers + 1
+
+    return officers

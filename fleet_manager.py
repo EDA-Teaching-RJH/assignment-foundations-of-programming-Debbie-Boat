@@ -68,3 +68,11 @@ def update_rank(n, r, i):
     for ii in range(len(i)):
         if i[ii] == idToChange:
             r[ii] = new_rank
+
+def display_roster(n, r, d, i):
+    print(f"{'Name':<10} {'Rank' :<10} {'Division':>10} {'ID':>5}")
+
+    for ii in range(len(n)):
+        print(f"{n[ii]:<10} {r[ii]:<10} {d[ii]:>10} {i[ii]:>5}")
+
+        

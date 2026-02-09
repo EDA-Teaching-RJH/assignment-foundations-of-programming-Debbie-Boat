@@ -81,3 +81,13 @@ def search_crew(n, r, d, i):
     for ii in range(len(n)):
         if search == n[ii]:
             print(n[ii], " ", d[ii], " ", r[ii], i[ii])
+
+def filter_by_division(n, d):
+    option = input("Enter a division name: ")
+
+    if option == "Command" or option == "Operations" or option == "Security":
+        for i in range(len(n)):
+            print(n[i], " ", d[i])
+
+    else:
+        print("Invalid. ")

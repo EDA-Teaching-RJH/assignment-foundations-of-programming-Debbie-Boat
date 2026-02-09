@@ -1,4 +1,40 @@
+def run_system():
+    names, ranks, divisions, ids = init_database()
+    user = input("Please Enter Name: ")
+    print(user, " logged in.")
 
+    while True:
+        option = display_menu()
+
+        if option == "1":
+            display_roster(names, ranks, divisions, ids)
+
+        elif option == "2":
+            names, ranks, divisions, ids = add_member(names, ranks, divisions, ids)
+
+        elif option == "3":
+            names, ranks, divisions, ids = remove_member(names, ranks, divisions, ids)
+
+        elif option == "4":
+            update_rank(names, ranks, ids)
+
+        elif option == "5":
+            search_crew(names, ranks, divisions, ids)
+
+        elif option == "6":
+            filter_by_division(names, divisions)
+
+        elif option == "7":
+            payroll = calculate_payroll(ranks)
+            print("Crew cost: ", payroll)
+
+        elif option == "8":
+            count = count_officers(ranks)
+            print("Number of Officers ", count)
+
+        elif option == "9":
+            print("Shutting down... ")
+            break
 
 def init_database():
     n = ["Picard", "Riker", "Data", "Worf", "Spock"]
@@ -19,6 +55,7 @@ def display_menu():
     print("6) Filter By Division")
     print("7) Calculate Crew Payroll")
     print("8) Count Officers")
+    print("9) Quit")
 
     option = input("Select Option: ")
 
@@ -112,3 +149,5 @@ def count_officers(r):
             officers = officers + 1
 
     return officers
+
+run_system()

@@ -50,3 +50,13 @@ def add_member(n, r, d, i):
 
     return n, r, d, i
 
+def remove_member(n, r, d, i):
+    option = input("Enter ID of record to remove: ")
+
+    idx = i.index(option)
+    n.pop(idx)
+    r.pop(idx)
+    d.pop(idx)
+    i.pop(idx)
+
+    return n, r, d, i

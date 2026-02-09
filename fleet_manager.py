@@ -91,3 +91,16 @@ def filter_by_division(n, d):
 
     else:
         print("Invalid. ")
+
+def calculate_payroll(r):
+    spend = 0
+
+    for i in range(len(r)):
+        if r[i] == "Commander" or r[i] == "Captain":
+            spend = spend + 1000
+
+        elif r[i] == "Lieutenant" or r[i] == "Lt. Commander":
+            spend = spend + 500
+
+    return spend
+            

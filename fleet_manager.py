@@ -75,4 +75,9 @@ def display_roster(n, r, d, i):
     for ii in range(len(n)):
         print(f"{n[ii]:<10} {r[ii]:<10} {d[ii]:>10} {i[ii]:>5}")
 
-        
+def search_crew(n, r, d, i):
+    search = input("Enter a name to search: ")
+
+    for ii in range(len(n)):
+        if search == n[ii]:
+            print(n[ii], " ", d[ii], " ", r[ii], i[ii])

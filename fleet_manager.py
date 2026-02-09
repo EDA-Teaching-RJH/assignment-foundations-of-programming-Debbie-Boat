@@ -60,3 +60,11 @@ def remove_member(n, r, d, i):
     i.pop(idx)
 
     return n, r, d, i
+
+def update_rank(n, r, i):
+    idToChange = input("Enter the ID for rank changes: ")
+    new_rank = input("Enter new rank: ")
+
+    for ii in range(len(i)):
+        if i[ii] == idToChange:
+            r[ii] = new_rank

@@ -23,3 +23,30 @@ def display_menu():
     option = input("Select Option: ")
 
     return option
+
+def add_member(n, r, d, i):
+    new_name = input("Enter Name: ")
+    n.append(new_name)
+
+    new_rank = input("Enter Rank: ")
+    if new_rank == "Captain" or new_rank == "Commander" or new_rank == "Lt. Commander" or new_rank == "Lieutenant":
+        r.append(new_rank)
+
+    else:
+        print("Invalid. ")
+        add_member(n, r, d, i)
+
+    new_division = input("Enter Division: ")
+    d.append(new_division)
+
+    new_id = input("Enter ID: ")
+    for ii in range(len(i)):
+        if new_id == i[ii]:
+            print("Invalid. ")
+            add_member(n, r, d, i)
+
+        else:
+            i.append(new_id)
+
+    return n, r, d, i
+
